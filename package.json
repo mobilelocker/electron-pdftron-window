@@ -1,0 +1,22 @@
+{
+  "name": "electron-pdftron-window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pdftron/webviewer": "^8.3.0",
+    "deep-extend": "^0.4.1",
+    "file-type": "^3.9.0",
+    "got": "^7.1.0",
+    "is-electron-renderer": "^2.0.1",
+    "read-chunk": "^2.0.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
