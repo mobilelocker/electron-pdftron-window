@@ -10,7 +10,7 @@ const log = require('electron-log');
 const BrowserWindow = isRenderer
     ? electron.remote.BrowserWindow : electron.BrowserWindow
 
-const PDFTRON_PATH = path.join(__dirname, 'webviewer.html')
+const PDFTRON_PATH = path.join(__dirname, '@pdftron', 'webviewer', 'public', 'ui', 'index.html')
 log.debug(`PDFTRON_PATH = ${PDFTRON_PATH}`)
 
 function isAlreadyLoadedWithPDFTron(url) {
@@ -44,12 +44,12 @@ function isPDF(url) {
             resolve(true)
         } else {
             got.head(url).then(res => {
-              if (res.headers.location) {
-                isPDF(res.headers.location).then(isit => resolve(isit))
-                  .catch(err => reject(err))
-              } else {
-                resolve(res.headers['content-type'].indexOf('application/pdf') !== -1)
-              }
+                if (res.headers.location) {
+                    isPDF(res.headers.location).then(isit => resolve(isit))
+                        .catch(err => reject(err))
+                } else {
+                    resolve(res.headers['content-type'].indexOf('application/pdf') !== -1)
+                }
             }).catch(err => reject(err))
         }
     })
