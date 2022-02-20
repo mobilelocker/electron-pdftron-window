@@ -1,5 +1,5 @@
 {
-  "name": "@mobilelocker/electron-pdftron-window",
+  "name": "electron-pdftron-window",
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
