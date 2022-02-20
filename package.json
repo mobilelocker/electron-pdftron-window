@@ -28,9 +28,5 @@
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11"
-  },
-  "peerDependencies": {
-    "electron": "^3.1.13",
-    "electron-log": "^2.2.17"
   }
 }
