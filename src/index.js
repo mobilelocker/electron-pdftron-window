@@ -10,8 +10,8 @@ const log = require('electron-log')
 const BrowserWindow = isRenderer
   ? electron.remote.BrowserWindow : electron.BrowserWindow
 
-//const PDFTRON_PATH = path.join(__dirname, 'node_modules', '@pdftron', 'webviewer', 'public', 'ui', 'index.html')
-const PDFTRON_PATH = path.join(__dirname, 'webviewer', 'ui', 'index.html')
+const PDFTRON_PATH = path.join(__dirname, 'node_modules', '@pdftron', 'webviewer', 'public', 'ui', 'index.html')
+//const PDFTRON_PATH = path.join(__dirname, 'webviewer', 'ui', 'index.html')
 log.debug(`PDFTRON_PATH = ${PDFTRON_PATH}`)
 
 function isAlreadyLoadedWithPDFTron (url) {

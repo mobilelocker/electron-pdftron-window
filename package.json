@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy": "mkdir -p dist/webviewer && rsync -avz --delete node_modules/@pdftron/webviewer/public/ dist/webviewer/",
-    "compile": "npm run copy && babel src/index.js -d dist",
+    "compile": "babel src/index.js -d dist",
     "prepublish": "npm run compile"
   },
   "repository": {
