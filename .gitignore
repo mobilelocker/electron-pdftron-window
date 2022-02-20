@@ -1,7 +1,13 @@
-node_modules
+/dist
+/node_modules
+npm-debug.log
+
+_ide_helper*
+.phpstorm.meta.php
+/public/*
 
 .DS_Store
+Thumbs.db
 
-yarn.lock
-
+yarn-error.log
 .idea
