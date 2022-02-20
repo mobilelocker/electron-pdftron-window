@@ -1,8 +1,8 @@
 const isRenderer = require('is-electron-renderer')
 const electron = require('electron')
 const path = require('path')
-const readChunk = require('read-chunk')
-const fileType = require('file-type')
+//const readChunk = require('read-chunk')
+//const fileType = require('file-type')
 const extend = require('deep-extend')
 //const got = require('got')
 const log = require('electron-log')
@@ -40,7 +40,8 @@ function isPDF (url) {
     if (isAlreadyLoadedWithPDFTron(url)) {
       resolve(false)
     } else if (isFile(url)) {
-      resolve(getMimeOfFile(url) === 'application/pdf')
+      resolve(true);
+      //resolve(getMimeOfFile(url) === 'application/pdf')
     } else if (hasPdfExtension(url)) {
       resolve(true)
     } else {
