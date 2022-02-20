@@ -15,6 +15,7 @@
   "author": "support@mobilelocker.com",
   "license": "ISC",
   "dependencies": {
+    "@pdftron/webviewer": "^8.3.0",
     "deep-extend": "^0.4.1",
     "file-type": "^3.9.0",
     "got": "^7.1.0",
@@ -27,7 +28,6 @@
     "@babel/preset-env": "^7.16.11"
   },
   "peerDependencies": {
-    "@pdftron/webviewer": "^8.3.0",
     "electron": "^3.1.13",
     "electron-log": "^2.2.17"
   }
