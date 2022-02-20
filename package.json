@@ -5,21 +5,26 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel src/index.js -d dist",
+    "copy": "mkdir -p dist/webviewer && rsync -avz --delete node_modules/@pdftron/webviewer/public/ dist/webviewer/",
+    "compile": "npm run copy && babel src/index.js -d dist",
     "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mobilelocker/electron-pdftron-window.git"
   },
+  "files": [
+    "dist/",
+    "node_modules/"
+  ],
   "author": "support@mobilelocker.com",
   "license": "ISC",
   "dependencies": {
     "@pdftron/webviewer": "^8.3.0",
-    "deep-extend": "^0.4.1",
-    "file-type": "^3.9.0",
+    "deep-extend": "^0.6.0",
+    "file-type": "^17.1.1",
     "is-electron-renderer": "^2.0.1",
-    "read-chunk": "^2.0.0"
+    "read-chunk": "^4.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.3",
