@@ -5,11 +5,12 @@ const readChunk = require('read-chunk')
 const fileType = require('file-type')
 const extend = require('deep-extend')
 const got = require('got')
+const log = require('electron-log');
 
 const BrowserWindow = isRenderer
     ? electron.remote.BrowserWindow : electron.BrowserWindow
 
-const PDFTRON_PATH = path.join(__dirname, 'pdftron', 'ui', 'index.html')
+const PDFTRON_PATH = path.join(__dirname, 'webviewer.html')
 
 function isAlreadyLoadedWithPDFTron(url) {
     return url.startsWith(`file://${PDFTRON_PATH}?file=`)
@@ -32,6 +33,7 @@ function hasPdfExtension(url) {
 }
 
 function isPDF(url) {
+    log.debug('isPDF()', url)
     return new Promise((resolve, reject) => {
         if (isAlreadyLoadedWithPDFTron(url)) {
             resolve(false)
@@ -72,6 +74,7 @@ class PDFTronWindow extends BrowserWindow {
     }
 
     loadURL(url, options) {
+        log.debug('loadURL()', url, options)
         isPDF(url).then(isit => {
             if (isit) {
                 super.loadURL(`file://webviewer.html?file=${decodeURIComponent(url)}`, options)
