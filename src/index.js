@@ -4,7 +4,7 @@ const path = require('path')
 const readChunk = require('read-chunk')
 const fileType = require('file-type')
 const extend = require('deep-extend')
-const got = require('got')
+//const got = require('got')
 const log = require('electron-log')
 
 const BrowserWindow = isRenderer
@@ -44,14 +44,15 @@ function isPDF (url) {
     } else if (hasPdfExtension(url)) {
       resolve(true)
     } else {
-      got.head(url).then(res => {
+      resolve(true)
+      /*got.head(url).then(res => {
         if (res.headers.location) {
           isPDF(res.headers.location).then(isit => resolve(isit))
             .catch(err => reject(err))
         } else {
           resolve(res.headers['content-type'].indexOf('application/pdf') !== -1)
         }
-      }).catch(err => reject(err))
+      }).catch(err => reject(err))*/
     }
   })
 }
