@@ -11,6 +11,7 @@ const BrowserWindow = isRenderer
     ? electron.remote.BrowserWindow : electron.BrowserWindow
 
 const PDFTRON_PATH = path.join(__dirname, 'webviewer.html')
+log.debug(`PDFTRON_PATH = ${PDFTRON_PATH}`)
 
 function isAlreadyLoadedWithPDFTron(url) {
     return url.startsWith(`file://${PDFTRON_PATH}?file=`)
