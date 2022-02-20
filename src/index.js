@@ -6,6 +6,7 @@ const fileType = require('file-type')
 const extend = require('deep-extend')
 const got = require('got')
 const log = require('electron-log');
+const WebViewer = require('@pdftron/webviewer')
 
 const BrowserWindow = isRenderer
     ? electron.remote.BrowserWindow : electron.BrowserWindow

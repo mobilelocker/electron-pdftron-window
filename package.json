@@ -22,13 +22,11 @@
     "file-type": "^3.9.0",
     "got": "^7.1.0",
     "is-electron-renderer": "^2.0.1",
-    "path": "^0.12.7",
     "read-chunk": "^2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "standard": "^8.6.0"
+    "@babel/preset-env": "^7.16.11"
   }
 }
