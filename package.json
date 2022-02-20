@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "mkdir -p dist/webviewer && cp -R node_modules/@pdftron/webviewer/public/ui dist/webviewer/",
-    "compile": "npm run prepare && babel src/index.js -d dist",
+    "compile": "babel src/index.js -d dist",
     "prepublish": "npm run compile"
   },
   "repository": {
@@ -19,7 +18,6 @@
     "@pdftron/webviewer": "^8.3.0",
     "deep-extend": "^0.4.1",
     "file-type": "^3.9.0",
-    "got": "^7.1.0",
     "is-electron-renderer": "^2.0.1",
     "read-chunk": "^2.0.0"
   },
